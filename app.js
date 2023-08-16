@@ -47,3 +47,9 @@ const vessels = [{
   price: 2,
   quantity: 0
 }]
+
+
+
+function orderVanilla() {
+  console.log('ordered a vanilla!')
+}

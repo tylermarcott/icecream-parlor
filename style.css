@@ -1,6 +1,6 @@
 :root {
-  --lightGray: rgb(198, 190, 190);
-
+  --lightGray: #c6bebe;
+  --lightPink: #fadadd;
 }
 
 body {
@@ -9,4 +9,23 @@ body {
 
 .light-gray {
   background-color: var(--lightGray);
+}
+
+.menu-card {
+  background-color: var(--lightPink);
+  padding: 1vh;
+  border-radius: 10px;
+}
+
+.menu-item:hover {
+  cursor: pointer;
+  transform: scale(1.10);
+}
+
+.menu-img {
+  border-radius: 10px;
+  height: 20vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
