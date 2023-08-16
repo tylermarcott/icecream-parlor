@@ -1,0 +1,12 @@
+:root {
+  --lightGray: rgb(198, 190, 190);
+
+}
+
+body {
+  background-color: #F6F0BC;
+}
+
+.light-gray {
+  background-color: var(--lightGray);
+}

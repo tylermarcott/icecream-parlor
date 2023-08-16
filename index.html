@@ -11,12 +11,89 @@
   <title>Document</title>
 </head>
 
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
 
 
-<body>
 
-  <!-- doesn't really seem like there's a need for a header or a footer in this project -->
-  <main>
+
+<body class="debug">
+
+  <header class="container-fluid">
+    <h2 class="p-2">Eileen's Iced Cream Parlor</h2>
+  </header>
+
+  <!-- doesn't really seem like there's a need for a footer in this project -->
+  <main class="container-fluid">
+    <!-- this looks like the layout would work best with a row with 2 columns -->
+    <section class="row">
+      <div class="col-6">
+        <!-- this row is for the labels at the top -->
+        <div class="row light-gray">
+          <div class="col-6 p-2">Name</div>
+          <div class="col-2 p-2">Qty</div>
+          <div class="col-2 p-2">Each</div>
+          <div class="col-2 p-2">Total</div>
+        </div>
+
+        <!-- STUB this row will be our cart stub -->
+        <div class="row light-gray p-2">
+          CART STUB
+        </div>
+
+        <div class="row">
+          <div class="col-10 text-end p-2">Total:</div>
+          <div class="col-12 text-end p-2">
+            <button class="btn btn-warning">PAY NOW!!!!</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- this wil be our list for toppings, cones, and ice cream. Looks like 3 rows, all with a col-12 with 3 col-4s below -->
+      <!-- toppings menu -->
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12 p-2">Menu</div>
+          <div class="col-4 p-2">Sprinkles $.25</div>
+          <div class="col-4 p-2">Chocolate Chips $.25</div>
+          <div class="col-4 p-2">Yummy Worms $.50</div>
+        </div>
+
+        <!-- vessels menu -->
+        <div class="row">
+          <div class="col-12 p-2">Vessels</div>
+          <div class="col-4 p-2">Waffle Cones $1</div>
+          <div class="col-4 p-2">Waffle Bowl $1.5</div>
+          <div class="col-4 p-2">Dipped Cone $2</div>
+        </div>
+
+        <!-- ice cream menu -->
+        <div class="row">
+          <div class="col-12 p-2">Ice Cream</div>
+          <div class="col-4 p-2">Cookie Dough $1.25</div>
+          <div class="col-4 p-2">Vanilla $1</div>
+          <div class="col-4 p-2">Chocolate $1.25</div>
+        </div>
+
+      </div>
+    </section>
+
 
   </main>
 
