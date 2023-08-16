@@ -130,7 +130,7 @@ function totalCost() {
 
   iceCream.forEach(flavor => {
     if (flavor.quantity > 0) {
-      orderTotal += flavor.quantity *= flavor.price
+      orderTotal += flavor.quantity * flavor.price
     }
   })
 
