@@ -109,4 +109,10 @@ function totalCost() {
 
   console.log('$', orderTotal)
 
+  // drawing total to DOM
+
+  let totalElem = document.getElementById('total')
+
+  totalElem.innerText = orderTotal.toString()
+
 }
