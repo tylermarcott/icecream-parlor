@@ -49,7 +49,7 @@ const vessels = [{
 }]
 
 
-
+// orders vanilla ice cream on click
 function orderVanilla() {
   let findVanilla = iceCream.find((cream) => cream.name == 'Vanilla')
 
@@ -58,11 +58,13 @@ function orderVanilla() {
 
   console.log('ordering vanilla', findVanilla,)
   console.log(findVanilla.quantity)
+
+  totalCost()
 }
 
 
 
-
+// orders strawberry ice cream on click
 function orderStrawberry() {
   let findStrawberry = iceCream.find((cream) => cream.name == 'Strawberry')
 
@@ -71,11 +73,13 @@ function orderStrawberry() {
 
   console.log('ordering strawberry', findStrawberry,)
   console.log(findStrawberry.quantity)
+
+  totalCost()
 }
 
 
 
-
+// orders cookie dough ice cream on click
 function orderCookieDough() {
   let findCookieDough = iceCream.find((cream) => cream.name == 'Cookie Dough')
 
@@ -84,4 +88,25 @@ function orderCookieDough() {
 
   console.log('ordering Cookie Dough', findCookieDough,)
   console.log(findCookieDough.quantity)
+
+  totalCost()
+}
+
+
+// function that finds each flavor and keeps tabs of the cost of our order. This function is called in all order functions
+function totalCost() {
+
+  let orderTotal = 0
+
+  iceCream.forEach(flavor => {
+    if (flavor.quantity > 0) {
+      orderTotal += flavor.quantity *= flavor.price
+    }
+  })
+
+  // this syntax rounds your number to 2 dec places
+  orderTotal = orderTotal.toFixed(2)
+
+  console.log('$', orderTotal)
+
 }
