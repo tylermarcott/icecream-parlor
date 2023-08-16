@@ -51,5 +51,37 @@ const vessels = [{
 
 
 function orderVanilla() {
-  console.log('ordered a vanilla!')
+  let findVanilla = iceCream.find((cream) => cream.name == 'Vanilla')
+
+  findVanilla.quantity++
+
+
+  console.log('ordering vanilla', findVanilla,)
+  console.log(findVanilla.quantity)
+}
+
+
+
+
+function orderStrawberry() {
+  let findStrawberry = iceCream.find((cream) => cream.name == 'Strawberry')
+
+  findStrawberry.quantity++
+
+
+  console.log('ordering strawberry', findStrawberry,)
+  console.log(findStrawberry.quantity)
+}
+
+
+
+
+function orderCookieDough() {
+  let findCookieDough = iceCream.find((cream) => cream.name == 'Cookie Dough')
+
+  findCookieDough.quantity++
+
+
+  console.log('ordering Cookie Dough', findCookieDough,)
+  console.log(findCookieDough.quantity)
 }
