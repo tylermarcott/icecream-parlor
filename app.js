@@ -49,6 +49,36 @@ const vessels = [{
 }]
 
 
+
+
+let cartElem = document.getElementById('cart')
+
+
+
+
+
+function drawCart() {
+  let cartContent = ''
+
+  iceCream.forEach(flavor => {
+    if (flavor.quantity > 0) {
+      cartContent += `
+                  <div class="justify-content-between">
+            <span class="col-6">${flavor.name} x ${flavor.quantity}</span>
+            <div class="col-2">$${flavor.price}</div>
+            <div class="col-2"></div>
+          </div>
+        `
+    }
+  })
+
+  cartElem.innerHTML = cartContent
+  totalCost()
+}
+
+
+
+
 // orders vanilla ice cream on click
 function orderVanilla() {
   let findVanilla = iceCream.find((cream) => cream.name == 'Vanilla')
@@ -59,7 +89,7 @@ function orderVanilla() {
   console.log('ordering vanilla', findVanilla,)
   console.log(findVanilla.quantity)
 
-  totalCost()
+  drawCart()
 }
 
 
@@ -74,7 +104,7 @@ function orderStrawberry() {
   console.log('ordering strawberry', findStrawberry,)
   console.log(findStrawberry.quantity)
 
-  totalCost()
+  drawCart()
 }
 
 
@@ -89,7 +119,7 @@ function orderCookieDough() {
   console.log('ordering Cookie Dough', findCookieDough,)
   console.log(findCookieDough.quantity)
 
-  totalCost()
+  drawCart()
 }
 
 
