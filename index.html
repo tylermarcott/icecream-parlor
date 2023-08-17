@@ -42,32 +42,31 @@
   <main class="container-fluid">
     <!-- this looks like the layout would work best with a row with 2 columns -->
     <section class="row">
-      <div class="col-12 col-md-6 border border-danger">
+      <div class="col-12 col-md-6 border border-light-subtle">
         <!-- this row is for the labels at the top -->
-        <div class="row light-gray border border-danger">
-          <div class="col-4 col-md-6 p-2">Name</div>
+        <div class="row light-gray border border-light-subtle">
+          <div class="col-4 p-2">Name</div>
           <div class="col-2 p-2">Qty</div>
           <div class="col-2 p-2">Each</div>
-          <div class="col-2 p-2">Total</div>
+          <div class="col-2 p-2 text-center">Total</div>
         </div>
 
-        <!-- id for cart to insert order onto page -->
-        <div id="cart" class="row light-gray p-2">
-
-          <!-- STUB this row will be our cart stub -->
-
-
-
-
+        <div class="flex-column justify-content-between">
+          <!-- id for cart to insert order onto page -->
+          <div id="cart" class="row light-gray p-2">
+            <!-- STUB this row will be our cart stub -->
+          </div>
         </div>
 
-        <div class="row border border-danger justify-content-end">
+
+
+        <div class="row border border-light-subtle justify-content-end">
           <!-- total id for inserting total -->
           <div class="col-8 text-end">Total: $</div>
           <div id="total" class="col-2 text-end p-2">
           </div>
           <div class="col-12 text-end p-2">
-            <button class="btn btn-warning">PAY NOW!!!!</button>
+            <button class="btn btn-warning" onclick="checkOut()">PAY NOW!!!!</button>
           </div>
         </div>
 

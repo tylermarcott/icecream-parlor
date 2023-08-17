@@ -57,16 +57,24 @@ let cartElem = document.getElementById('cart')
 
 
 
+
+
+// TODO: refactor code!
+// TODO: add some styling bc site looks like shiiiiite, border looks especially bad lol
+
+
+
 function drawCart() {
   let cartContent = ''
 
   iceCream.forEach(flavor => {
     if (flavor.quantity > 0) {
       cartContent += `
-                  <div class="justify-content-between">
-            <span class="col-6">${flavor.name} x ${flavor.quantity}</span>
-            <div class="col-2">$${flavor.price}</div>
-            <div class="col-2"></div>
+                  <div class="d-flex justify-content-between p-1">
+            <span>${flavor.name}</span>
+            <span>x ${flavor.quantity}</span>
+            <span>$${flavor.price}</span>
+            <div class="col-3"></div>
           </div>
         `
     }
@@ -75,10 +83,11 @@ function drawCart() {
   toppings.forEach(topping => {
     if (topping.quantity > 0) {
       cartContent += `
-                  <div class="justify-content-between">
-            <span class="col-6">${topping.name} x ${topping.quantity}</span>
-            <div class="col-2">$${topping.price}</div>
-            <div class="col-2"></div>
+                  <div class="d-flex justify-content-between p-1">
+            <span>${topping.name}</span>
+            <span>x ${topping.quantity}</span>
+            <span>$${topping.price}</span>
+            <div class="col-3"></div>
           </div>
         `
     }
@@ -87,10 +96,11 @@ function drawCart() {
   vessels.forEach(vessel => {
     if (vessel.quantity > 0) {
       cartContent += `
-                  <div class="justify-content-between">
-            <span class="col-6">${vessel.name} x ${vessel.quantity}</span>
-            <div class="col-2">$${vessel.price}</div>
-            <div class="col-2"></div>
+                  <div class="d-flex justify-content-between p-1">
+            <span>${vessel.name}</span>
+            <span>x ${vessel.quantity}</span>
+            <span>$${vessel.price}</span>
+            <div class="col-3"></div>
           </div>
         `
     }
@@ -250,4 +260,13 @@ function totalCost() {
 
   totalElem.innerText = orderTotal.toString()
 
+}
+
+// FIXME: need output for this guy
+function checkOut() {
+  iceCream.forEach(flavor => {
+    if (flavor.quantity > 0) {
+      flavor.quantity = 0
+    }
+  })
 }
